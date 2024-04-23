@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from "./App.module.css";
-import Buttons from './Components/Buttons';
+import TopButtons  from './Components/TopButtons';
+import BottomButtons from './Components/BottomButtons';
 import PokeDisplay from './Components/PokeDisplay';
 import PokeSearch from './Components/PokeSearch';
 
@@ -11,10 +12,10 @@ export function App() {
   return (
     <>
       <div className={`${styles.pokeCase} ${styles.front}`}>
-        <Buttons count={4}/>
-        <PokeDisplay/>
-        <Buttons count={3}/>
-        <PokeSearch/>
+        <TopButtons/>
+        {/* <PokeDisplay/>
+        <PokeSearch/> */}
+        <BottomButtons/>
       </div>
       <div className={`${styles.pokeCase} ${styles.back}`}>
 
