@@ -2,20 +2,29 @@
 .pokeCase{
     width: 35vw;
     background-color: var(--background_pokeCase);
+    min-height: 400px;
+    overflow:scroll ;
 }
 .front{
     height: var(--height_pokecase);
-    padding-left: 2rem;
-    padding-top:2rem;
-    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-top:1rem;
+    padding-bottom: 1rem;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
-    border-right: 1rem solid black;
+    border-right: 0.8rem solid black;
 }
 .back{
     height: calc(var(--height_pokecase) - 1.2rem );
     position: relative;
-    top:0.6rem;
+    top: 0.6rem;
     clip-path: polygon(58% 0, 78% 20%, 100% 20%, 100% 100%, 0 100%, 0 0);
     border-bottom-right-radius: 1rem;
+}
+
+.buttonContainer{
+    width: 100%;
+    display: flex;
+    flex-flow:nowrap row;
+    gap:5px;
 }
