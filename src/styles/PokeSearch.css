@@ -1,0 +1,30 @@
+.search-container{
+    display: flex;
+    width: 100%;
+    gap:30px;
+    padding: 0 20px;
+}
+
+[name="pokemon-search"]{
+    height: 50px;
+    flex-grow: 1; 
+    border-radius: 15px;
+    font-size: 15px;
+    background-color: rgb(255, 207, 49);
+}
+button{
+    width:50px;    
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background: radial-gradient(at center, #FFFFFF 0%, #DC092F 55%);
+    box-shadow: -1px 3px 2px 5px #b90022;
+    border-style: groove;
+}
+button:active{
+    box-shadow: -1px 3px 2px 5px #b90022 inset;
+    transform:scale(0.97,0.97);
+}
+[name="pokemon-search"]::placeholder{
+    color:white;
+    font-weight: bolder;
+}

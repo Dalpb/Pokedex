@@ -1,5 +1,5 @@
 import Button from "./Button";
-import styles from "../App.module.css"
+import styles from "../styles/App.module.css"
 
 export function TopButtons(){
     return(

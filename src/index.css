@@ -11,19 +11,28 @@
   --fifthButton_color: #519afb;
   --border_display:#b1b0b1;
   --display_pokemon:#fefeff;
-  --height_pokecase: 85vh;
+  --height_pokecase: 80vh;
 }
-
 body{
-  margin:0;
+  margin:20px;
+  width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
   background-color: var(--background_page);
+  overflow: hidden;
 }
 #root{
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width:1200px) {
+  body{
+      overflow-y: scroll;
+  }
+  #root{
+    align-items: flex-start;
+  }
 }

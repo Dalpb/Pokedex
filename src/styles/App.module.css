@@ -1,0 +1,59 @@
+@import "../index.css";
+.pokeCase{
+    width:525px;
+    background-color: var(--background_pokeCase);
+}
+.front{
+    height: var(--height_pokecase);
+    padding-left: 2rem;
+    padding-top:1.5rem;
+    padding-right: 2rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-right: 0.8rem solid black;
+    display: flex;
+    flex-flow: nowrap column;
+    gap: 20px;
+}
+.back{
+    height: calc(var(--height_pokecase) - 1.2rem );
+    position: relative;
+    top: 0.6rem;
+    clip-path: polygon(58% 0, 78% 20%, 100% 20%, 100% 100%, 0 100%, 0 0);
+    border-bottom-right-radius: 1rem;
+}
+.front,.back{
+}
+
+
+@media only screen and (max-width:1200px) {
+    .pokeCase.back{
+        display: none;
+    }
+    .front,.back{
+        min-height: 800px;
+    }
+}
+@media only screen and (max-height:700px) {
+    .front{
+        height: 500px;
+    }
+    .back{
+        height: 500px;
+    }
+}
+
+.buttonContainer{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    gap:1.5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.buttonCircle{
+    height: auto;
+    aspect-ratio: 1/1;
+}
+
