@@ -2,6 +2,7 @@
 .pokeCase{
     width:525px;
     background-color: var(--background_pokeCase);
+    min-height: 600px;
 }
 .front{
     height: var(--height_pokecase);
@@ -21,8 +22,6 @@
     top: 0.6rem;
     clip-path: polygon(58% 0, 78% 20%, 100% 20%, 100% 100%, 0 100%, 0 0);
     border-bottom-right-radius: 1rem;
-}
-.front,.back{
 }
 
 
@@ -44,7 +43,7 @@
 }
 
 .buttonContainer{
-    height: 15%;
+    height: 13%;
     width: 100%;
     display: flex;
     flex-flow: row nowrap;

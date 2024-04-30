@@ -1,4 +1,4 @@
-import { size } from "./buttonSize";
+import { size } from "../js/buttonSize.js";
 import styles from "../styles/App.module.css"
 
 
