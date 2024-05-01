@@ -1,20 +1,22 @@
 import "../styles/PokeDisplay.css"
+import {useState,useEffect} from 'react'
 
-export function PokeDisplay(){
 
+export function PokeDisplay({data}){
+    console.log(data)
     return(
         <div className="display-container">
             <div className="border-displayer">
                 <div className="main-displayer">
-                    <h1>Titulo</h1>
-                    <img />
+                    <h1 id="p-name">{data.name}</h1>
+                    <img id="p-img" src={data.srcImg} alt={`pokemon image -${data.id}`}/>
                     <div className="stats-container">
-                        <p><strong>Hp:</strong></p>
-                        <p><strong>Attack:</strong></p>
-                        <p><strong>Defense:</strong></p>
-                        <p><strong>Special-Attack:</strong></p>
-                        <p><strong>Special-Defense:</strong></p>
-                        <p><strong>Speed:</strong></p>
+                        <p><strong>Hp:</strong><span id="hp">{data.hp}</span></p>
+                        <p><strong>Attack:</strong><span id="attack">{data.attack}</span></p>
+                        <p><strong>Defense:</strong><span id="defense">{data.defense}</span></p>
+                        <p><strong>Special-Attack:</strong><span id="s-attack">{data.s_attack}</span></p>
+                        <p><strong>Special-Defense:</strong><span id="s-deffense">{data.s_defense}</span></p>
+                        <p><strong>Speed:</strong><span id="speed">{data.speed}</span></p>
                     </div>
                 </div>
             </div>

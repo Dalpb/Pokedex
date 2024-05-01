@@ -31,6 +31,7 @@ h1{
     grid-area: title;
     justify-self: center;
     align-self: center;
+    text-transform: capitalize;
 }
 img{
     grid-area: pokemon;
@@ -42,6 +43,15 @@ img{
     flex-flow: column nowrap;
     gap:10px;
     font-size: 15px;
+}
+
+img{
+    grid-area:pokemon;
+    justify-self: center;
+    align-self: center;
+    object-fit:cover;
+    width: 100%;
+    height: 80%;
 }
 
 h1,p{

@@ -8,16 +8,19 @@ import PokeSearch from './Components/PokeSearch';
 
 export function App() {
   
+  const [pokeData, setPokeData] = useState({});
 
-  const [count, setCount] = useState(0)
+  const catchPokeData = (changeData)=>{
+    setPokeData(changeData);
+  }
 
   return (
     <>
       <div className={`${styles.pokeCase} ${styles.front}`}>
         <TopButtons/>
-        <PokeDisplay/>
+        <PokeDisplay data={pokeData}/>
         <BottomButtons/>
-        <PokeSearch/>
+        <PokeSearch catchPokeData={catchPokeData}/>
       </div>
       <div className={`${styles.pokeCase} ${styles.back}`}></div>
     </>
