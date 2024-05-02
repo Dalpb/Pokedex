@@ -11,6 +11,8 @@
     border-radius: 15px;
     font-size: 15px;
     background-color: rgb(255, 207, 49);
+    color:white;
+    font-weight: bolder;
 }
 button{
     width:50px;    

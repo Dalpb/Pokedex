@@ -1,13 +1,24 @@
 import "../styles/PokeDisplay.css"
-import {useState,useEffect} from 'react'
+import {useRef} from 'react'
 
 
 export function PokeDisplay({data}){
+
+    const refImg = useRef(null);
+
     const render =()=>{
         return (
             <>
                 <h1 id="p-name">{data.name}</h1>
-                <img id="p-img" src={data.srcImg} alt={`pokemon image -${data.id}`}/>
+                <img id="p-img" src={data.srcImg} alt={`pokemon image -${data.id}`} ref={refImg}
+                 onMouseOver={()=>{
+                    refImg.current.src = data.srcImgBack;
+                }
+                } 
+                onMouseLeave={()=>{
+                    refImg.current.src = data.srcImg;
+                }}
+                />
                 <div className="stats-container">
                     <p><strong>Hp:</strong><span id="hp">{data.hp}</span></p>
                     <p><strong>Attack:</strong><span id="attack">{data.attack}</span></p>

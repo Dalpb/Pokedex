@@ -16,6 +16,7 @@ export function PokeSearch({catchPokeData}) {
                         id: pokeInf.id,
                         name: pokeInf.name,
                         srcImg: pokeInf.sprites.front_default,
+                        srcImgBack: pokeInf.sprites.back_default,
                         hp: pokeInf.stats[0].base_stat,
                         attack: pokeInf.stats[1].base_stat,
                         defense: pokeInf.stats[2].base_stat,
@@ -25,6 +26,7 @@ export function PokeSearch({catchPokeData}) {
                     }
                     catchPokeData(changeData);
                 })
+                inputRef.current.value = ""
             }}></button>
         </div>
     )
